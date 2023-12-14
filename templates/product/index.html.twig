@@ -256,8 +256,9 @@
 								<div class="single-product">
 									<div class="product-img">
 										<a href="product-details.html">
-											<img class="default-img" src="https://via.placeholder.com/550x750" alt="#">
-											<img class="hover-img" src="https://via.placeholder.com/550x750" alt="#">
+											<img class="default-img" src="{{ product.imagePath }}" alt="#">
+											<img class="hover-img" src="{{ product.imagePath }}" alt="#">
+
 										</a>
 										<div class="button-head">
 											<div class="product-action">
@@ -275,16 +276,17 @@
 												</a>
 											</div>
 											<div class="product-action-2">
-												<a title="Add to cart" href="#">Add to cart</a>
+												<a title="Add to cart" href="{{ path('app_cart',{'id':product.id}) }}">Add to cart</a>
 											</div>
 										</div>
 									</div>
 									<div class="product-content">
 										<h3>
-											<a href="product-details.html">Women Hot Collection</a>
+											<a href="product-details.html">{{ product.name }}</a>
 										</h3>
 										<div class="product-price">
-											<span>$29.00</span>
+											<span>{{ product.price }}
+												TND</span>
 										</div>
 									</div>
 								</div>

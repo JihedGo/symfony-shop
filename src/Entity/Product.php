@@ -33,6 +33,9 @@ class Product
     #[ORM\JoinColumn(nullable: false)]
     private ?Category $category = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $imagePath = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -106,6 +109,18 @@ class Product
     public function setCategory(?Category $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getImagePath(): ?string
+    {
+        return $this->imagePath;
+    }
+
+    public function setImagePath(string $imagePath): static
+    {
+        $this->imagePath = $imagePath;
 
         return $this;
     }

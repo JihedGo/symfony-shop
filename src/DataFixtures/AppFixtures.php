@@ -34,6 +34,7 @@ class AppFixtures extends Fixture
                     ->setDescription("description $i")
                     ->setIsAvailable([true, false][mt_rand(0, 1)])
                     ->setQuantity(mt_rand(2, 10))
+                    ->setImagePath("https://placebeard.it/550x750")
                     ->setPrice(mt_rand(100, 999));
                 $manager->persist($product);
             }
